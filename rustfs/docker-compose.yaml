@@ -2,8 +2,7 @@
 services:
 
   rustfs:
-    image: rustfs/rustfs:1.0.0-alpha.80
-    container_name: rustfs-server
+    image: rustfs/rustfs:1.0.0-beta.6
     security_opt:
       - "no-new-privileges:true"
     ports:
@@ -20,7 +19,6 @@ services:
       - RUSTFS_ACCESS_KEY=rustfsadmin # CHANGEME
       - RUSTFS_SECRET_KEY=rustfsadmin # CHANGEME
       - RUSTFS_OBS_LOGGER_LEVEL=info
-      - RUSTFS_TLS_PATH=/opt/tls
       # Object Cache
       - RUSTFS_OBJECT_CACHE_ENABLE=true
       - RUSTFS_OBJECT_CACHE_TTL_SECS=300
