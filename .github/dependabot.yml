@@ -10,6 +10,15 @@ updates:
       - "dependencies"
 
   - package-ecosystem: "docker-compose"
+    directory: "/cassandra"
+    schedule:
+      interval: "monthly"
+    target-branch: main
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "docker-compose"
     directory: "/kafka"
     schedule:
       interval: "monthly"
