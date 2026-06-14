@@ -1,4 +1,7 @@
+name: nats
+
 services:
+
   nats:
     image: nats:2.14-alpine
     ports:

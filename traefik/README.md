@@ -17,4 +17,11 @@ See `$.environment.APP_NAME` to find out to which application was the endpoint r
 Additionally, this configuration showcases some Traefik features such as:
 
 1. Prometheus metrics, available on http://localhost:6982/metrics endpoint.
-2. Example HTTP middleware for removing prefix from HTTP path. 
+2. Example HTTP middleware for removing prefix from HTTP path.
+
+## Ports
+
+| port   | info               |
+| ------ | ------------------ |
+| `4000` | HTTP gateway       |
+| `6982` | Prometheus metrics |

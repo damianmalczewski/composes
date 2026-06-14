@@ -6,14 +6,22 @@ development environments. Keycloak is configured with two realms - `master` (def
 
 Additionally, it sets up development tools:
 
-- [`mailpit:v1.26`][mailpit-docker] - mock for email server (realms are configured to use it as email server),
-- [`phpmyadmin:5.2.2`][phpmyadmin-docker].
+- [`mailpit`][mailpit-docker] - mock for email server (realms are configured to use it as email server),
+- [`phpmyadmin`][phpmyadmin-docker] - for inspecting the database.
 
 To restore database to the default setup, recreate volumes.
 
 ```sh
 docker compose down --volumes
 ```
+
+## Ports
+
+| port   | info       |
+| ------ | ---------- |
+| `8080` | Keycloak   |
+| `8025` | Mailpit    |
+| `3307` | PhpMyAdmin |
 
 ## Usage Details
 

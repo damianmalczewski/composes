@@ -1,4 +1,6 @@
 # origin: https://github.com/rustfs/rustfs/blob/76fa86fdc5d1e696508758ebe1a830be105ef8ad/docker-compose-simple.yml
+name: rustfs
+
 services:
 
   rustfs:

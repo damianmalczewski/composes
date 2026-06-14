@@ -1,5 +1,7 @@
 # Docker setup for RabbitMQ
 
+## Ports
+
 | port    | info              |
 | ------- | ----------------- |
 | `1883`  | MQTT port         |

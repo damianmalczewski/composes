@@ -1,4 +1,7 @@
+name: postgres
+
 services:
+
   postgres:
     image: postgres:18.4
     environment:

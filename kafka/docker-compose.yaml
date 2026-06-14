@@ -1,4 +1,7 @@
+name: kafka
+
 services:
+
   kafka:
     image: apache/kafka:4.2.0
     ports:
@@ -36,6 +39,7 @@ services:
       -c "
         /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic test-topic --replication-factor=1 --partitions=5 --bootstrap-server kafka:29092
       "
+    restart: "no"
 
 networks:
   kafka:

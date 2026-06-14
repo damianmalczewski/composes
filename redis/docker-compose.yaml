@@ -1,4 +1,7 @@
+name: redis
+
 services:
+
   redis:
     image: redis:8.8-alpine
     ports:

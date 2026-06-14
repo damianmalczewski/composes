@@ -1,3 +1,5 @@
+name: azurite
+
 services:
 
   azurite:

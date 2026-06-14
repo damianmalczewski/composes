@@ -1,4 +1,7 @@
+name: minio-cluster
+
 services:
+
   gateway:
     image: nginx:${NGINX_VERSION}
     volumes:
