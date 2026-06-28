@@ -1,0 +1,23 @@
+name: wiremock
+
+services:
+
+  wiremock:
+    image: wiremock/wiremock:3.13.2-alpine
+    ports:
+      - "127.0.0.1:1080:8080"
+    command: ["--global-response-templating"]
+    volumes:
+      - ./wiremock/__files:/home/wiremock/__files:ro
+      - ./wiremock/mappings:/home/wiremock/mappings:ro
+    networks:
+      - wiremock
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/__admin/health >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+networks:
+  wiremock:
