@@ -15,8 +15,8 @@ Keys inside each service block must follow this order:
 9. `depends_on`
 10. `restart`
 
-Keys not in this list (e.g. `security_opt`, `profiles`) go immediately after the last applicable key (sorted
-alphanumerically) from the list above that they are most logically associated with.
+Keys not in this list (e.g. `security_opt`, `profiles`) go immediately after the last key from the list above and are 
+sorted alphanumerically.
 
 ## `dependabot.yml`
 
