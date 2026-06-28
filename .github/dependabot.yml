@@ -5,7 +5,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      azurite:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -14,7 +18,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      cassandra:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -23,7 +31,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      elasticsearch:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -32,7 +44,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      kafka:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -41,7 +57,24 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      keycloak:
+        patterns:
+          - "*"
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "docker-compose"
+    directory: "/mailpit"
+    schedule:
+      interval: "monthly"
+    target-branch: main
+    open-pull-requests-limit: 1
+    groups:
+      mailpit:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -50,7 +83,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      mongo:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -59,7 +96,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      nats:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -68,7 +109,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      postgres:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -77,7 +122,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      rabbitmq:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -86,7 +135,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      redis:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -95,7 +148,11 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      rustfs:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
 
@@ -104,6 +161,36 @@ updates:
     schedule:
       interval: "monthly"
     target-branch: main
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
+    groups:
+      traefik:
+        patterns:
+          - "*"
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "docker-compose"
+    directory: "/valkey"
+    schedule:
+      interval: "monthly"
+    target-branch: main
+    open-pull-requests-limit: 1
+    groups:
+      valkey:
+        patterns:
+          - "*"
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "docker-compose"
+    directory: "/wiremock"
+    schedule:
+      interval: "monthly"
+    target-branch: main
+    open-pull-requests-limit: 1
+    groups:
+      wiremock:
+        patterns:
+          - "*"
     labels:
       - "dependencies"
