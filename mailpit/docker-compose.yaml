@@ -1,0 +1,30 @@
+name: mailpit
+
+services:
+
+  mailpit:
+    image: axllent/mailpit:v1.30.1
+    ports:
+      - "127.0.0.1:8025:8025"
+      - "127.0.0.1:1025:1025"
+    environment:
+      MP_MAX_MESSAGES: 5000
+      MP_DATABASE: /data/mailpit.db
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+    volumes:
+      - mailpit_data:/data
+    networks:
+      - mailpit
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "--quiet", "http://localhost:8025"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+networks:
+  mailpit:
+
+volumes:
+  mailpit_data:
