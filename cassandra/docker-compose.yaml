@@ -13,16 +13,16 @@ services:
       CASSANDRA_ENDPOINT_SNITCH: GossipingPropertyFileSnitch
       MAX_HEAP_SIZE: 1G
       HEAP_NEWSIZE: 256M
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+    networks:
+      - cassandra
     healthcheck:
       test: ["CMD-SHELL", "cqlsh localhost 9042 -e 'DESCRIBE KEYSPACES' >/dev/null 2>&1"]
       interval: 5s
       timeout: 10s
       retries: 5
       start_period: 10s
-    networks:
-      - cassandra
-    volumes:
-      - cassandra_data:/var/lib/cassandra
     restart: unless-stopped
 
 networks:

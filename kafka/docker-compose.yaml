@@ -33,15 +33,15 @@ services:
   kafka-init-job:
     image: apache/kafka:4.3.1
     entrypoint: /bin/bash
+    command: |
+      -c "
+        /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic test-topic --replication-factor=1 --partitions=5 --bootstrap-server kafka:29092
+      "
     networks:
       - kafka
     depends_on:
       kafka:
         condition: service_healthy
-    command: |
-      -c "
-        /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic test-topic --replication-factor=1 --partitions=5 --bootstrap-server kafka:29092
-      "
     restart: "no"
 
 networks:
